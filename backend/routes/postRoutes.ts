@@ -11,5 +11,6 @@ export const router = express.Router();
 
 // Post create, read,read single
 router.post("/", protect, createPost);
-router.get("/", protect, readPosts);
+router.get("/", readPosts);
+// router.get("/", protect, readPosts);
 router.get("/:id", protect, readPost);
